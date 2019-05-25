@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public int playerSpeed = 10;
     public bool facingRight = true;
-    public int playerJump = 500;
+    public int playerJump = 1250;
     public float moveX;
 
     void Update()
