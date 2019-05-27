@@ -23,15 +23,15 @@ public class PlayerPoints : MonoBehaviour
         switch(trigger.gameObject.name)
         {
             case "Potato":
-                points += 100;
+                points += 200;
                 Destroy(trigger.gameObject);
                 break;
             case "Pineapple":
-                points += 100;
+                points += 200;
                 Destroy(trigger.gameObject);
                 break;
             case "Ham":
-                points += 100;
+                points += 200;
                 Destroy(trigger.gameObject);
                 break;
             case "Cheese":
@@ -44,6 +44,6 @@ public class PlayerPoints : MonoBehaviour
 
     void TotalPoints()
     {
-        points = points + (int)( timer * 10 );
+        points = points + (int)( timer * 20 );
     }
 }
