@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public int EnemySpeed=5;
+    public int EnemySpeed=2;
     public bool facing = true;
     public int xMove=1;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+   
     void Flip()
     {
         if(xMove > 0)
@@ -27,26 +23,26 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(xMove, 0));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(xMove, 0) * EnemySpeed;
 
-        if (xMove > 0.0f && facing == false)
-        {
-            FlipEnemy();
-        }
-        else if (xMove < 0.0f && facing == true)
-        {
-            FlipEnemy();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Flip")
+        if(hit.distance < 0.4f)
         {
             Flip();
-        }   
+            FlipEnemy();
+        }
     }
 
+    /*
+    void OnTriggerEnter2D(Collider2D trigger)
+    {
+        if (trigger.gameObject.tag == "Flip")
+        {
+            Flip();
+            FlipEnemy();
+        }   
+    }
+    */
     void FlipEnemy()
     {
         facing = !facing;
