@@ -5,18 +5,29 @@ using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float fall_Multiplier = 3f;
+    public float lowJump_Multiplier = 20f;
+    Rigidbody2D rb;
     public int player_Speed = 10;
     public bool facing = true;
     public int player_Jump = 1400;
     public float moveX;
     public bool isGrounded = true;
 
-    private void FixedUpdate()
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
+        if(rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fall_Multiplier - 1) * Time.deltaTime;
+        }else if(rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJump_Multiplier - 1) * Time.deltaTime;
+        }
+
         PlayerMove();
         PlayerRaycast();
     }
