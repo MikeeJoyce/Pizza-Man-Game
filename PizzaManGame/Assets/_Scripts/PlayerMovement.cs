@@ -53,19 +53,31 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
-        {
-            isGrounded = true;
-        }
+        if(collision.gameObject.tag=="Ground")
+        isGrounded = true;
     }
 
     void PlayerRaycast()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
-        if(hit.distance<0.5f && hit.collider.tag=="Enemy")
+        if(hit.distance<0.9f && hit.collider.tag=="Enemy")
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 250);
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale=17;
+            hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled=false;
+            hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled=false;
+            hit.collider.gameObject.GetComponent<EnemyMovement>().enabled=false;
+
         }
+        if (hit.distance < 0.3f && hit.collider.tag != "Enemy")
+        {
+            isGrounded = true;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D trigger)
+    {
+        
     }
 
     //Flip method when turning around

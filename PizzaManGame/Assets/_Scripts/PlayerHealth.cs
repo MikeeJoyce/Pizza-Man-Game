@@ -26,11 +26,6 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene("Level-1");
         }
-        if (collision.gameObject.tag == "Enemy")
-        {
-            SceneManager.LoadScene("Level-1");
-         
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

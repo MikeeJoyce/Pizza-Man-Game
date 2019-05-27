@@ -31,18 +31,13 @@ public class EnemyMovement : MonoBehaviour
             Flip();
             FlipEnemy();
         }
+        if (hit.distance < 0.5f && hit.collider.tag == "Player")
+        {
+            Destroy(hit.collider.gameObject);
+        }
     }
 
-    /*
-    void OnTriggerEnter2D(Collider2D trigger)
-    {
-        if (trigger.gameObject.tag == "Flip")
-        {
-            Flip();
-            FlipEnemy();
-        }   
-    }
-    */
+    
     void FlipEnemy()
     {
         facing = !facing;
