@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if(hit.distance<0.9f && hit.collider.tag=="Enemy")
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 250);
+            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);
             hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale=17;
             hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled=false;
             hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled=false;
