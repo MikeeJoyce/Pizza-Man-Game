@@ -18,4 +18,32 @@ public class PlayerPoints : MonoBehaviour
             SceneManager.LoadScene("Level-1");
         }
     }
+    private void OnTriggerEnter2D(Collider2D trigger)
+    {
+        switch(trigger.gameObject.name)
+        {
+            case "Potato":
+                points += 100;
+                Destroy(trigger.gameObject);
+                break;
+            case "Pineapple":
+                points += 100;
+                Destroy(trigger.gameObject);
+                break;
+            case "Ham":
+                points += 100;
+                Destroy(trigger.gameObject);
+                break;
+            case "Cheese":
+                points += 200;
+                Destroy(trigger.gameObject);
+                break;
+        }
+        TotalPoints();
+    }
+
+    void TotalPoints()
+    {
+        points = points + (int)( timer * 10 );
+    }
 }

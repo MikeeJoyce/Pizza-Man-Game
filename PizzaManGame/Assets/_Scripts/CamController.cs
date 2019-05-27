@@ -9,10 +9,10 @@ public class CamController : MonoBehaviour
 
     //Control the x and y axis of the camera
     public float x_Min;
-    public float x_Max = 20;
+    public float x_Max = 40;
 
-    public float y_Min =-20;
-    public float y_Max = 20;
+    public float y_Min =-40;
+    public float y_Max = 40;
     // Start is called before the first frame update
 
     void Start()
