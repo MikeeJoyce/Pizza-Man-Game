@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         PlayerMove();
+        PlayerRaycast();
     }
 
     void PlayerMove()
@@ -55,9 +56,18 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
-            Debug.Log("Hi");
         }
     }
+
+    void PlayerRaycast()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
+        if(hit.distance<0.5f && hit.collider.tag=="Enemy")
+        {
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
+        }
+    }
+
     //Flip method when turning around
     void FlipPlayer()
     {
