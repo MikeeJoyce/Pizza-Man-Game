@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-   
+
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * player_Speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
     //Jump method
