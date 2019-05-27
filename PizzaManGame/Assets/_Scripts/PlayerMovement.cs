@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJump_Multiplier - 1) * Time.deltaTime;
         }
-
         PlayerMove();
         PlayerRaycast();
     }

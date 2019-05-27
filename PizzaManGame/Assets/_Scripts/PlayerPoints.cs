@@ -25,6 +25,7 @@ public class PlayerPoints : MonoBehaviour
             case "Potato":
                 points += 200;
                 Destroy(trigger.gameObject);
+                
                 break;
             case "Pineapple":
                 points += 200;
