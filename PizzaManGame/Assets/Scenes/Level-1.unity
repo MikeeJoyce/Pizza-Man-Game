@@ -30333,7 +30333,33 @@ PrefabInstance:
       propertyPath: health
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 955597973324487048, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 955597973324487049, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 955597973324487049, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 955597973324487049, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 955597973324487049, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 955597973324487048, guid: a7d1f4bbdfe6d9e4faa730817110f2de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7d1f4bbdfe6d9e4faa730817110f2de, type: 3}
 --- !u!1001 &6389822705927609403
 PrefabInstance:

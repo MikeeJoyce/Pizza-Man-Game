@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
             hit.collider.gameObject.GetComponent<EnemyMovement>().enabled=false;
 
         }
-        if (hit.distance < 0.3f && hit.collider.tag != "Enemy")
+        if (hit.distance < 0.5f && hit.collider.tag != "Enemy")
         {
             isGrounded = true;
         }

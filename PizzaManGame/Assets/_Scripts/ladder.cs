@@ -4,7 +4,7 @@ using System.Collections;
 
 public class ladder : MonoBehaviour {
 
-		public float speed =6;
+		public float speed =15;
 
 	// Use this for initialization
 	void Start () {
