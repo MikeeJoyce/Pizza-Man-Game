@@ -39,12 +39,17 @@ public class PlayerPoints : MonoBehaviour
                 points += 200;
                 Destroy(trigger.gameObject);
                 break;
+            case "EndGame":
+                //This is the last object, ends the game by adding total points based on time
+                TotalPoints();
+                
+                break;
         }
-        TotalPoints();
+        //TotalPoints();
     }
 
     void TotalPoints()
     {
-        points = points + (int)( timer * 20 );
+        points = points + (int)( timer * 10 );
     }
 }

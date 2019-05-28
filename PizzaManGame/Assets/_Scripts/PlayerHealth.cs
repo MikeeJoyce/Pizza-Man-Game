@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.tag == "Trap")
         {
-            SceneManager.LoadScene("Level-1");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

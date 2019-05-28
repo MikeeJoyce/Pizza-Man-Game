@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     void PlayerRaycast()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
-        if(hit.distance<0.9f && hit.collider.tag=="Enemy")
+        if(hit.distance< 2f && hit.collider.tag=="Enemy")
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
             hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);

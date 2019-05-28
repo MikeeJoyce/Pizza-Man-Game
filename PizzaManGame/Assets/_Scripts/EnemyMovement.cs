@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
         if (hit.distance < 0.5f && hit.collider.tag == "Player")
         {
             Destroy(hit.collider.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
