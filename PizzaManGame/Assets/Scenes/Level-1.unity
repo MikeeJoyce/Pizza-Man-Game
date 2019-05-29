@@ -34846,12 +34846,12 @@ PrefabInstance:
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.003201373
+      value: 0.0135256415
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.096719444
+      value: 0.076070905
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
@@ -34897,6 +34897,16 @@ PrefabInstance:
         type: 3}
       propertyPath: isGrounded
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196163464690002446, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: fall_Multiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196163464690002446, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: lowJump_Multiplier
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d1f4bbdfe6d9e4faa730817110f2de, type: 3}
