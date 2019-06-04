@@ -34846,12 +34846,12 @@ PrefabInstance:
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.0135256415
+      value: 0.003201373
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.076070905
+      value: 0.096719444
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
@@ -34868,25 +34868,15 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: a86757781ffb75d41819ae9faaf240e4, type: 2}
-    - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
-        type: 3}
-      propertyPath: m_EdgeRadius
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002481, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.05
+      value: -0.045
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002481, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Radius
-      value: 0.04
+      value: 0.04485542
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002481, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
@@ -34907,16 +34897,6 @@ PrefabInstance:
         type: 3}
       propertyPath: isGrounded
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2196163464690002446, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
-        type: 3}
-      propertyPath: fall_Multiplier
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2196163464690002446, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
-        type: 3}
-      propertyPath: lowJump_Multiplier
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d1f4bbdfe6d9e4faa730817110f2de, type: 3}

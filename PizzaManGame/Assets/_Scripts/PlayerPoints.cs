@@ -15,7 +15,7 @@ public class PlayerPoints : MonoBehaviour
         //Restarts the game when timer ends
         if (timer < 0.1f)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Level-1");
         }
     }
     private void OnTriggerEnter2D(Collider2D trigger)

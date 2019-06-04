@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float fall_Multiplier = 3f;
-    public float lowJump_Multiplier = 25f;
+    public float lowJump_Multiplier = 20f;
     Rigidbody2D rb;
     public int player_Speed = 10;
     public bool facing = true;
@@ -24,12 +23,9 @@ public class PlayerMovement : MonoBehaviour
         if(rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fall_Multiplier - 1) * Time.deltaTime;
-            isGrounded = false;
-        }
-        else if(rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        }else if(rb.velocity.y > 0 && !Input.GetButton("Jump"))
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJump_Multiplier - 1) * Time.deltaTime;
-          
         }
 
         PlayerMove();
@@ -68,20 +64,14 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
-        {
-         
-        }
-    }
-    private void FixedUpdate()
-    {
-        PlayerRaycast();
+        if(collision.gameObject.tag=="Ground")
+        isGrounded = true;
     }
 
     void PlayerRaycast()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
-        if(hit.distance < 5f & hit.collider.tag=="Enemy")
+        if(hit.distance<0.9f && hit.collider.tag=="Enemy")
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
             hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);
@@ -91,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             hit.collider.gameObject.GetComponent<EnemyMovement>().enabled=false;
 
         }
-        if (hit.distance < 0.4f && hit.collider.tag != "Enemy")
+        if (hit.distance < 0.3f && hit.collider.tag != "Enemy")
         {
             isGrounded = true;
         }
