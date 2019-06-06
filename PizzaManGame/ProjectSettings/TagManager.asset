@@ -8,6 +8,7 @@ TagManager:
   - Trap
   - Enemy
   - Flip
+  - Ingredient
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2062691217
+    locked: 0
+  - name: Enemy
+    uniqueID: 742624199
     locked: 0

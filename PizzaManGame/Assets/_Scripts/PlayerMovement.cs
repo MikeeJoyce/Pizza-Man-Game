@@ -80,21 +80,30 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerRaycast()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down);
-        if(hit.distance < 5f & hit.collider.tag=="Enemy")
-        {
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);
-            hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale=17;
-            hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled=false;
-            hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled=false;
-            hit.collider.gameObject.GetComponent<EnemyMovement>().enabled=false;
+        int layerMask = 1 << 8;
+        layerMask = ~layerMask;
 
-        }
-        if (hit.distance < 0.4f && hit.collider.tag != "Enemy")
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,1.2f , layerMask);
+        try
         {
-            isGrounded = true;
+
+
+            if (hit.collider.tag == "Enemy")
+            {
+                GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
+                hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);
+                hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 17;
+                hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+                hit.collider.gameObject.GetComponent<EnemyMovement>().enabled = false;
+
+            }
+            if (hit.collider.tag != "Enemy")
+            {
+                isGrounded = true;
+            }
         }
+        catch { }
     }
     private void OnTriggerEnter2D(Collider2D trigger)
     {

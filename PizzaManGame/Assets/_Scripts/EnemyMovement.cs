@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
             Flip();
             FlipEnemy();
         }
-        if (hit.distance < 0.5f && hit.collider.tag == "Player")
+        if (hit.distance < 0.7f && hit.collider.tag == "Player")
         {
             Destroy(hit.collider.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
