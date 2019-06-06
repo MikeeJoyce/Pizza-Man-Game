@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pineapple (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7355249128329257805, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 7355249128329257804, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -346,6 +351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &130886202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -554,6 +564,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 330523320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &210474437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210474438}
+  - component: {fileID: 210474440}
+  - component: {fileID: 210474439}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &210474438
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210474437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1503486632}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -35}
+  m_SizeDelta: {x: 242.91, y: 120.71}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &210474439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210474437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Score :
+
+'
+--- !u!222 &210474440
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210474437}
+  m_CullTransparentMesh: 0
 --- !u!4 &238107652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8903425836649370836, guid: 756b2be89b0106543a61a491acac17bd,
@@ -577,6 +668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -672,6 +768,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potato (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -754,6 +855,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00a026470cf30274c9deca9dc94952cd, type: 3}
+--- !u!1 &263777312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263777313}
+  - component: {fileID: 263777315}
+  - component: {fileID: 263777314}
+  m_Layer: 5
+  m_Name: TimeLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &263777313
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263777312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1503486632}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 242.91, y: 73.86}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &263777314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263777312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Time Left :'
+--- !u!222 &263777315
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263777312}
+  m_CullTransparentMesh: 0
 --- !u!4 &291023568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
@@ -884,7 +1064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &306895056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -976,6 +1156,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -1522,7 +1707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &544786147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1609,6 +1794,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pineapple (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7355249128329257805, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 7355249128329257804, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1692,6 +1882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -1787,6 +1982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1880,6 +2080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pineapple (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355249128329257805, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 7355249128329257804, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
         type: 3}
@@ -2044,6 +2249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potato (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2177,7 +2387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &603530850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2315,7 +2525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &649546138
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2401,6 +2611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pineapple (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355249128329257805, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 7355249128329257804, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
         type: 3}
@@ -2519,7 +2734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &671675038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2691,6 +2906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potato (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2784,6 +3004,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -2924,7 +3149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &754914284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3010,6 +3235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ham (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903425836649370835, guid: 756b2be89b0106543a61a491acac17bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8903425836649370836, guid: 756b2be89b0106543a61a491acac17bd,
         type: 3}
@@ -3108,12 +3338,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819902100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: 12.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6500001, y: -2.4700003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1831755710}
-  m_RootOrder: 25
+  m_Father: {fileID: 845607954}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &819902102
 Rigidbody2D:
@@ -3207,7 +3437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &821728191
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3357,7 +3587,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.85, y: 14.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 819902101}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3406,7 +3637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &859106377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3492,6 +3723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -3699,7 +3935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &897550800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28630,6 +28866,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ham
       objectReference: {fileID: 0}
+    - target: {fileID: 8903425836649370835, guid: 756b2be89b0106543a61a491acac17bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8903425836649370836, guid: 756b2be89b0106543a61a491acac17bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28719,6 +28960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -28892,6 +29138,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -29077,6 +29328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -29308,7 +29564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1160940469
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29394,6 +29650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -29488,6 +29749,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pineapple (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355249128329257805, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 7355249128329257804, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
         type: 3}
@@ -30212,6 +30478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30491,6 +30762,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30618,7 +30894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1342886820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30738,7 +31014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1373235438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30824,6 +31100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ham (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903425836649370835, guid: 756b2be89b0106543a61a491acac17bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8903425836649370836, guid: 756b2be89b0106543a61a491acac17bd,
         type: 3}
@@ -31112,7 +31393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1440669903
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31232,7 +31513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1457554547
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31352,7 +31633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1462362963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31478,7 +31759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1481892951
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31565,6 +31846,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potato (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31647,6 +31933,106 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00a026470cf30274c9deca9dc94952cd, type: 3}
+--- !u!1 &1503486628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1503486632}
+  - component: {fileID: 1503486631}
+  - component: {fileID: 1503486630}
+  - component: {fileID: 1503486629}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1503486629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503486628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1503486630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503486628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 400
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 700, y: 800}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1503486631
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503486628}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1503486632
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503486628}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 263777313}
+  - {fileID: 210474438}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1505858159
 GameObject:
   m_ObjectHideFlags: 0
@@ -31692,7 +32078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1505858162
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31778,6 +32164,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -31890,7 +32281,7 @@ Transform:
   m_LocalScale: {x: 1.487, y: 1.298, z: 0}
   m_Children: []
   m_Father: {fileID: 1831755710}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1524249958
 SpriteRenderer:
@@ -31951,6 +32342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -32045,6 +32441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cheese (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
@@ -32406,6 +32807,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1166856488}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1643899961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643899964}
+  - component: {fileID: 1643899963}
+  - component: {fileID: 1643899962}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1643899962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643899961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1643899963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643899961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1643899964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643899961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1649086109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32618,6 +33085,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32745,7 +33217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1803056624
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32996,6 +33468,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potato (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33143,7 +33620,6 @@ Transform:
   - {fileID: 1569449567}
   - {fileID: 2100636710}
   - {fileID: 54853746}
-  - {fileID: 819902101}
   - {fileID: 1524249957}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -33250,6 +33726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -33378,7 +33859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1912257682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33464,6 +33945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cheese (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
@@ -33558,6 +34044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -33686,7 +34177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &1952307478
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34143,7 +34634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &2077867428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34308,6 +34799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Potato (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
@@ -34515,7 +35011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed6a0e746b509640b6e1b7a88d9cdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
 --- !u!61 &2116008910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34614,6 +35110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34708,6 +35209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Potato
       objectReference: {fileID: 0}
+    - target: {fileID: 709992861966737315, guid: 00a026470cf30274c9deca9dc94952cd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 709992861966737314, guid: 00a026470cf30274c9deca9dc94952cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34776,6 +35282,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4219146878086816721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2663664440990878175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663664440990878172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1368e2bb62ac44a8505161791cf247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fall_Multiplier: 3
+  lowJump_Multiplier: 25
+  player_Speed: 10
+  facing: 1
+  player_Jump: 1400
+  moveX: 0
+  isGrounded: 1
 --- !u!1001 &4219146878086816721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34791,12 +35316,12 @@ PrefabInstance:
     - target: {fileID: 2196163464690002484, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.11
+      value: -5.14
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002484, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.23
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002484, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
@@ -34846,22 +35371,22 @@ PrefabInstance:
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.0135256415
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.076070905
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.0033597425
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.08328052
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002480, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
@@ -34891,13 +35416,13 @@ PrefabInstance:
     - target: {fileID: 2196163464690002481, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.004
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002481, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: a86757781ffb75d41819ae9faaf240e4, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2196163464690002447, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
         type: 3}
       propertyPath: health
@@ -34918,7 +35443,33 @@ PrefabInstance:
       propertyPath: lowJump_Multiplier
       value: 25
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2196163464690002485, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2062691217
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196163464690002485, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196163464690002483, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: a86757781ffb75d41819ae9faaf240e4, type: 2}
+    - target: {fileID: 2196163464690002444, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 210474437}
+    - target: {fileID: 2196163464690002444, guid: a7d1f4bbdfe6d9e4faa730817110f2de,
+        type: 3}
+      propertyPath: timerUI
+      value: 
+      objectReference: {fileID: 263777312}
+    m_RemovedComponents:
+    - {fileID: 2196163464690002446, guid: a7d1f4bbdfe6d9e4faa730817110f2de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7d1f4bbdfe6d9e4faa730817110f2de, type: 3}
 --- !u!1001 &4745622121158851974
 PrefabInstance:
@@ -34931,6 +35482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589167, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746639725381589161, guid: 63024ee594e68f74f82ea9a03df4483d,
         type: 3}
@@ -34987,6 +35543,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589160, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 742624199
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589160, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589162, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589162, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589165, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589165, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746639725381589165, guid: 63024ee594e68f74f82ea9a03df4483d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63024ee594e68f74f82ea9a03df4483d, type: 3}
 --- !u!1001 &7355249127299330873
@@ -35000,6 +35591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pineapple
+      objectReference: {fileID: 0}
+    - target: {fileID: 7355249128329257805, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 7355249128329257804, guid: 28b33bffa18c4864b9a92b5ae197f8b8,
         type: 3}
@@ -35074,6 +35670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cheese
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
@@ -35158,6 +35759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ham
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903425836649370835, guid: 756b2be89b0106543a61a491acac17bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8903425836649370836, guid: 756b2be89b0106543a61a491acac17bd,
         type: 3}
