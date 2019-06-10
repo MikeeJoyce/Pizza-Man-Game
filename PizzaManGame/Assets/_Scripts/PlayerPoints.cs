@@ -59,11 +59,12 @@ public class PlayerPoints : MonoBehaviour
                     points += 200;
 
                     break;
-                case "EndGame":
+                case "house":
                     //Check to see if all ingredients found
                     if (collectAll == true)
                     {
                         TotalPoints();
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     }
                     else
                     {
