@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public int player_Speed = 10;
     public bool facing = true;
-    public int player_Jump = 1500;
+    public int player_Jump = 1200;
     public float moveX;
     public bool isGrounded = true;
 
@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
     //Jump method
     void Jump()
     {
+        isGrounded = false;
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * player_Jump);
         isGrounded = false;
     }

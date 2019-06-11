@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
         }
         if (hit.distance < 0.7f && hit.collider.tag == "Player")
         {
+            PlayerPoints.points = 0;
             Destroy(hit.collider.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
