@@ -103,10 +103,7 @@ public class PlayerMovement : MonoBehaviour
         }
         catch { }
     }
-    private void OnTriggerEnter2D(Collider2D trigger)
-    {
-        
-    }
+    
 
     //Flip method when turning around
     void FlipPlayer()
