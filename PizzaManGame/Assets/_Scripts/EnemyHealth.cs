@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
         if(gameObject.transform.position.y < -20)
         {
             Destroy(gameObject);
+             // plays sound when collided.
         }
     }
 }

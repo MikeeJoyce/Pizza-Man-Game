@@ -13,14 +13,14 @@ public class PlayerMovement : MonoBehaviour
     public float moveX;
     public bool isGrounded = true;
 
-    public AudioClip kill;
-    AudioSource audioSource;
+    //public AudioClip kill;
+    //AudioSource audioSource;
 
-    void Awake()
-    {
+    //void Awake()
+    //{
         
-        audioSource = GetComponent<AudioSource>();
-    }
+    //    audioSource = GetComponent<AudioSource>();
+    //}
     void Update()
     {
 
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
                 hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 hit.collider.gameObject.GetComponent<EnemyMovement>().enabled = false;
-                audioSource.PlayOneShot(kill,1);
+                //audioSource.PlayOneShot(kill,1);
 
             }
             if (test.collider.tag != "Enemy")
