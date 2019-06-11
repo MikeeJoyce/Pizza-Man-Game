@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerPoints : MonoBehaviour
 {
     private float timer = 180;
-    static int points = 0;
+    public static int points = 0;
     public GameObject timerUI;
     public GameObject scoreUI;
     bool isInCollision = false;
