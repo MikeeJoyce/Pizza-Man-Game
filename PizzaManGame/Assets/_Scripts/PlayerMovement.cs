@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (hit.collider.tag == "Enemy")
             {
-                GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1500);
+                GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1350);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 17;
                 hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
