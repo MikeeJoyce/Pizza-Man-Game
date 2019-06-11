@@ -13,12 +13,19 @@ public class PlayerMovement : MonoBehaviour
     public float moveX;
     public bool isGrounded = true;
 
+    public AudioClip kill;
+    AudioSource audioSource;
+
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
+
+        
+
         //No idea why won't let us jump while running
         /*
         if(rb.velocity.y < 0)
@@ -32,8 +39,8 @@ public class PlayerMovement : MonoBehaviour
           
         }
         */
-         
-        
+
+
         PlayerMove();
         PlayerRaycast();
     }
@@ -86,15 +93,16 @@ public class PlayerMovement : MonoBehaviour
         try
         {
 
-
             if (hit.collider.tag == "Enemy")
             {
+                
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1350);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 17;
                 hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 hit.collider.gameObject.GetComponent<EnemyMovement>().enabled = false;
+                audioSource.PlayOneShot(kill,1);
 
             }
             if (test.collider.tag != "Enemy")
