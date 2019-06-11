@@ -30709,6 +30709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33029,6 +33034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cheese (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33122,6 +33132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cheese (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
@@ -34827,6 +34842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cheese (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8132020131659126912, guid: 93746c0eaea5a76428ae251f89163812,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     - target: {fileID: 8132020131659126913, guid: 93746c0eaea5a76428ae251f89163812,
         type: 3}
