@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        
         //No idea why won't let us jump while running
         /*
         if(rb.velocity.y < 0)

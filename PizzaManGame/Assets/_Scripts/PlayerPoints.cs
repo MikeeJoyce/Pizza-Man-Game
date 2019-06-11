@@ -81,6 +81,10 @@ public class PlayerPoints : MonoBehaviour
                     }
                     break;
 
+                case "spike":
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    break;
+
             }
         }
         else
