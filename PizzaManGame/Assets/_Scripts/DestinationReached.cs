@@ -1,27 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DestinationReached : MonoBehaviour
 {
-    bool collectAll = false;
-
-    void OnTriggerEnter2D(Collider2D other)
+    static int countIngredients;
+    private void Update()
     {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        countIngredients = PlayerPoints.countIngredients;
+
     }
 
-    private void FixedUpdate()
+    void OnTriggerEnter2D(Collider2D trigger)
     {
-
-        if (GameObject.FindWithTag("Ingredient") == null)
+        if (trigger.gameObject.name == "EndGame")
         {
-            collectAll = true;
+            if (countIngredients <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
-
 }

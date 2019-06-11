@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2196163464690002446}
   - component: {fileID: 2196163464690002447}
   - component: {fileID: 2196163464690002444}
+  - component: {fileID: 1430874267403085184}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -180,8 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a1368e2bb62ac44a8505161791cf247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fall_Multiplier: 2.5
-  lowJump_Multiplier: 2
   player_Speed: 10
   facing: 1
   player_Jump: 1400
@@ -213,4 +212,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9762e7354a2585448c7e1b21770623b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
+  timerUI: {fileID: 0}
+  scoreUI: {fileID: 0}
+--- !u!114 &1430874267403085184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196163464690002445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327eb021e90d56148b6f4e196f37305e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

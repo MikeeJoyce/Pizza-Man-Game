@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float fall_Multiplier = 3f;
-    public float lowJump_Multiplier = 25f;
     Rigidbody2D rb;
     public int player_Speed = 10;
     public bool facing = true;
-    public int player_Jump = 1400;
+    public int player_Jump = 1500;
     public float moveX;
     public bool isGrounded = true;
 
@@ -21,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        //No idea why won't let us jump while running
+        /*
         if(rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fall_Multiplier - 1) * Time.deltaTime;
@@ -31,7 +31,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJump_Multiplier - 1) * Time.deltaTime;
           
         }
-
+        */
+         
+        
         PlayerMove();
         PlayerRaycast();
     }
@@ -55,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         //call method when spacebar pressed
         if (Input.GetButtonDown("Jump") && isGrounded==true )
         {
+            isGrounded = false;
             Jump();
         }
    
@@ -66,13 +69,7 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * player_Jump);
         isGrounded = false;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy")
-        {
-         
-        }
-    }
+
     private void FixedUpdate()
     {
         PlayerRaycast();
@@ -84,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         layerMask = ~layerMask;
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,1.2f , layerMask);
+        RaycastHit2D test = Physics2D.Raycast(transform.position, Vector2.down, 1f);
         try
         {
 
@@ -98,17 +96,14 @@ public class PlayerMovement : MonoBehaviour
                 hit.collider.gameObject.GetComponent<EnemyMovement>().enabled = false;
 
             }
-            if (hit.collider.tag != "Enemy")
+            if (test.collider.tag != "Enemy")
             {
                 isGrounded = true;
             }
         }
         catch { }
     }
-    private void OnTriggerEnter2D(Collider2D trigger)
-    {
-        
-    }
+    
 
     //Flip method when turning around
     void FlipPlayer()

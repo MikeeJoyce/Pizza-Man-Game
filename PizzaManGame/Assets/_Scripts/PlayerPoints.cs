@@ -11,8 +11,12 @@ public class PlayerPoints : MonoBehaviour
     public GameObject timerUI;
     public GameObject scoreUI;
     bool isInCollision = false;
-    bool collectAll = false;
+    static public int countIngredients;
 
+    private void Awake()
+    {
+        countIngredients = GameObject.FindGameObjectsWithTag("Ingredient").Length;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -21,8 +25,10 @@ public class PlayerPoints : MonoBehaviour
         timerUI.gameObject.GetComponent<Text>().text = ("Time Left: " + (int)timer);
         scoreUI.gameObject.GetComponent<Text>().text = ("Score: " + (int)points);
         //Restarts the game when timer ends
+
         if (timer < 0.1f)
         {
+            points = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
@@ -41,30 +47,33 @@ public class PlayerPoints : MonoBehaviour
                 case "Potato":
                     Destroy(trigger.gameObject);
                     points += 200;
-
+                    countIngredients--;
+                    Debug.Log(countIngredients);
                     break;
                 case "Pineapple":
 
                     Destroy(trigger.gameObject);
                     points += 200;
-
+                    countIngredients--;
+                    Debug.Log(countIngredients);
                     break;
                 case "Ham":
                     Destroy(trigger.gameObject);
                     points += 200;
-
+                    countIngredients-- ;
+                    Debug.Log(countIngredients);
                     break;
                 case "Cheese":
                     Destroy(trigger.gameObject);
                     points += 200;
-
+                    countIngredients-- ;
+                    Debug.Log(countIngredients);
                     break;
-                case "house":
+                case "EndGame":
                     //Check to see if all ingredients found
-                    if (collectAll == true)
+                    if (countIngredients <= 0)
                     {
                         TotalPoints();
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     }
                     else
                     {
@@ -79,14 +88,6 @@ public class PlayerPoints : MonoBehaviour
         
     }
     //Check if collected all the ingredients
-    private void FixedUpdate()
-    {
-        
-        if (GameObject.FindWithTag("Ingredient") == null)
-        {
-            collectAll = true;
-        }
-    }
 
     void TotalPoints()
     {
