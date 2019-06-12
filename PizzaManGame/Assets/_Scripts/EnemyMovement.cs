@@ -31,15 +31,18 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Rycast left and right for the enemy to hit the player
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(xMove, 0));
         RaycastHit2D left = Physics2D.Raycast(transform.position, new Vector2(-1, 0));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(xMove, 0) * EnemySpeed;
-
+        
+        //Flip the enemy when he hits invisible trigger blocks we used for flipping
         if(hit.distance < 0.4f)
         {
             Flip();
             FlipEnemy();
         }
+        //Checks if it hits player, if it does it destroys it
         if ((hit.distance < 0.7f && hit.collider.tag == "Player") || (left.distance<.07f && hit.collider.tag == "Player"))
         {
             audioSource.PlayOneShot(kill, 1);
@@ -49,7 +52,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    
+    //Flip script we used in player as well changes X axis to -1 so it flips
     void FlipEnemy()
     {
         facing = !facing;

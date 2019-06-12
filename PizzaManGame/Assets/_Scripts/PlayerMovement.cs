@@ -79,12 +79,13 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * player_Jump);
         isGrounded = false;
     }
-
+    //Raycast for killing enemies called here
     private void FixedUpdate()
     {
         PlayerRaycast();
     }
 
+    //Used for htting enemies, and also checking if charaacter is on the ground so it prevents multiple jumps
     void PlayerRaycast()
     {
         int layerMask = 1 << 8;

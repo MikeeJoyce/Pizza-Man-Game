@@ -39,6 +39,7 @@ public class PlayerPoints : MonoBehaviour
     {
    
         //Collecting all ingredients, and increasing score
+        //Used this to try limit it to picking it only 1 time, instead of multiple frames 
         if (isInCollision == false)
         {
             isInCollision = true;
@@ -46,6 +47,7 @@ public class PlayerPoints : MonoBehaviour
 
             switch (trigger.gameObject.name)
             {
+                //Takes 1 away from the total , adds points , and debug is for our testing purposes only
                 case "Potato":
                     Destroy(trigger.gameObject);
                     points += 200;
@@ -79,6 +81,7 @@ public class PlayerPoints : MonoBehaviour
                     }
                     else
                     {
+                        //For our testing only
                         Debug.Log("Not collected all ingr");
                     }
                     break;

@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     {
 
     }
-
+    //Kills the character if it collides with objects tagged as trap
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Trap")
@@ -33,10 +33,6 @@ public class PlayerHealth : MonoBehaviour
             audioSource.PlayOneShot(kill, 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
     }
 
 }

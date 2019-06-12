@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿/* Basic camera controller for our game, follows our character 
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

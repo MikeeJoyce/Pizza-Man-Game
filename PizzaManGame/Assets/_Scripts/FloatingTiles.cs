@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Script used for floating tiles, very similar to our enemy movement
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
