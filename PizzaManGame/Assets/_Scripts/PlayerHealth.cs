@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
-
+    public AudioClip kill;
+    AudioSource audioSource;
     public bool death;
     public int health;
     // Start is called before the first frame update
@@ -14,6 +15,11 @@ public class PlayerHealth : MonoBehaviour
         death = false;   
     }
 
+    void Awake()
+    {
+
+        audioSource = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.tag == "Trap")
         {
+            audioSource.PlayOneShot(kill, 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

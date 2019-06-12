@@ -13,14 +13,15 @@ public class PlayerMovement : MonoBehaviour
     public float moveX;
     public bool isGrounded = true;
 
-    //public AudioClip kill;
-    //AudioSource audioSource;
+    public AudioClip kill;
+    AudioSource audioSource;
+    
 
-    //void Awake()
-    //{
+    void Awake()
+    {
         
-    //    audioSource = GetComponent<AudioSource>();
-    //}
+        audioSource = GetComponent<AudioSource>();
+    }
     void Update()
     {
 
@@ -73,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
     //Jump method
     void Jump()
     {
+        
         isGrounded = false;
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * player_Jump);
         isGrounded = false;
@@ -95,14 +97,14 @@ public class PlayerMovement : MonoBehaviour
 
             if (hit.collider.tag == "Enemy")
             {
-                
+                audioSource.PlayOneShot(kill, 1);
                 GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1350);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1300);
                 hit.collider.gameObject.GetComponent<Rigidbody2D>().gravityScale = 17;
                 hit.collider.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 hit.collider.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
                 hit.collider.gameObject.GetComponent<EnemyMovement>().enabled = false;
-                //audioSource.PlayOneShot(kill,1);
+                
 
             }
             if (test.collider.tag != "Enemy")
