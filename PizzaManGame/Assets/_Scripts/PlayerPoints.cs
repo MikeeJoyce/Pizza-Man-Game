@@ -10,6 +10,7 @@ public class PlayerPoints : MonoBehaviour
     public static int points = 0;
     public GameObject timerUI;
     public GameObject scoreUI;
+    public GameObject ingredientsUI;
     bool isInCollision = false;
     static public int countIngredients;
 
@@ -24,6 +25,7 @@ public class PlayerPoints : MonoBehaviour
         timer -= Time.deltaTime;
         timerUI.gameObject.GetComponent<Text>().text = ("Time Left: " + (int)timer);
         scoreUI.gameObject.GetComponent<Text>().text = ("Score: " + (int)points);
+        ingredientsUI.gameObject.GetComponent<Text>().text = ("Ingredients left: " + (int)countIngredients);
         //Restarts the game when timer ends
 
         if (timer < 0.1f)
